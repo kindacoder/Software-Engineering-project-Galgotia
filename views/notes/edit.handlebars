@@ -1,0 +1,21 @@
+
+<div class="container">
+  <div class="card" style="width:90%">
+
+    <div class="card-body">
+      <h3>Edit Food</h3>
+      <form action="/notes/{{data.id}}?_method=PUT" method="POST" action="">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="test" class="form-control" value="{{data.title}}" name="title">
+        <input type="hidden" name="_method" value="PUT">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Add Details</label>
+        <textarea class="form-control" name="details" rows="3" required >{{data.details}}</textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Update Food</button>
+    </form>
+    </div>
+  </div>
+</div>

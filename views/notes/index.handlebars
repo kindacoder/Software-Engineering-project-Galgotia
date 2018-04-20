@@ -1,0 +1,16 @@
+
+<div class="container">
+    {{#each data}}
+  <div class="card card-body">
+      <h3>{{title}}</h3>
+      <p>{{details}}</p>
+      <a href="/notes/edit/{{id}}" class="btn btn-primary button btn-block mb-2"> Edit Food</a>
+      <form action="/notes/{{id}}?_method=DELETE" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+      <button type="submit" class="btn btn-danger button btn-block">Delete Food</button>
+    </form>
+  </div>
+  {{else}}
+  <p>No Foods Listed by you</p>
+{{/each}}
+</div>
